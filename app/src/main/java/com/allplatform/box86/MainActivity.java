@@ -117,7 +117,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         }else if (id == R.id.github) {
             startActivity(new Intent(Intent.ACTION_VIEW,
-                    Uri.parse("https://www.youtube.com/c/AkiraYuki_Official")));
+                    Uri.parse("https://github.com/AllPlatform/Box86Launcher")));
         } else if (id == R.id.github1) {
             startActivity(new Intent(Intent.ACTION_VIEW,
                     Uri.parse("https://github.com/termux")));
