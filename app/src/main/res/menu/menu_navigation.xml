@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+    <group android:checkableBehavior="single">
+    <item android:id="@+id/home1"
+        android:title="@string/home_navigation"
+        android:icon="@drawable/home72x72"/>
+    <item android:id="@+id/wine"
+        android:title="@string/wine_navigation"
+        android:icon="@drawable/wine72x72"/>
+    <item android:id="@+id/library"
+        android:title="@string/library_navigation"
+        android:icon="@drawable/file72x72"/>
+    <item android:id="@+id/setting"
+          android:title="@string/setting_navigation"
+          android:icon="@drawable/setting72x72"/>
+    <item android:id="@+id/about"
+        android:title="@string/about_navigation"
+        android:icon="@drawable/info72x72" />
+    </group>
+
+    <item android:title="@string/follow_navigation">
+        <menu>
+            <item android:id="@+id/youtube"
+                android:title="@string/youtube_navigation"
+                android:icon="@drawable/youtube72x72"/>
+            <item android:id="@+id/facebook"
+                android:title="@string/facebook_navigation"
+                android:icon="@drawable/fb72x72"/>
+            <item android:id="@+id/discord"
+                android:title="@string/discord_navigation"
+                android:icon="@drawable/discord72x72"/>
+            <item android:id="@+id/github"
+                android:title="@string/github_navigation"
+                android:icon="@drawable/github72x72"/>
+            <item android:id="@+id/github1"
+                android:title="@string/github_navigation1"
+                android:icon="@drawable/github72x72"/>
+            <item android:id="@+id/github2"
+                android:title="@string/github_navigation2"
+                android:icon="@drawable/github72x72"/>
+            <item android:id="@+id/github3"
+                android:title="@string/github_navigation3"
+                android:icon="@drawable/github72x72"/>
+            <item android:id="@+id/github4"
+                android:title="@string/github_navigation4"
+                android:icon="@drawable/github72x72"/>
+
+
+        </menu>
+    </item>
+
+</menu>

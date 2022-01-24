@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.allplatform.box86">
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.RECORD_AUDIO" /> <!--XServer XSDL-->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/appicon"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:banner="@drawable/banner"
+        android:isGame="true"
+        android:extractNativeLibs="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--WINE-->
+        <activity android:name=".Wine"
+            android:screenOrientation="sensorLandscape"
+            android:exported="true">
+        </activity>
+        <!--TERMUX-->
+        <activity android:name="com.termux.app.TermuxActivity"
+            android:label="@string/application_name"
+            android:configChanges="orientation|screenSize|smallestScreenSize|density|screenLayout|uiMode|keyboard|keyboardHidden|navigation"
+            android:launchMode="singleTask"
+            android:resizeableActivity="true"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"
+            android:theme="@style/Theme.Termux"/>
+
+        <service android:name="com.termux.app.TermuxService"
+            android:exported="false"/>
+        <service
+            android:name="com.termux.app.RunCommandService"
+            android:exported="true"
+            android:stopWithTask="true">
+        </service>
+
+        <!--XServer XSDL-->
+        <activity android:name="x.org.server.MainActivity"
+            android:label="@string/app_name"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:windowSoftInputMode="stateUnspecified"
+            android:exported="true">
+            <intent-filter>
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" /> <!-- Samsung's multiwindow -->
+                <action android:name="com.sec.android.airview.HOVER" /> <!-- Stupid Samsung requires their own intent for finger-hover events -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" /> <!-- Android TV requires this -->
+                <category android:name="tv.ouya.intent.category.GAME" /> <!-- For that one user who still got an OUYA in his living room and won't throw it away just because someone else decides that it's dead -->
+            </intent-filter>
+        </activity>
+
+        <meta-data android:name="com.sec.android.support.multiwindow" android:value="true" />
+
+
+        <activity android:name="x.org.server.RestartMainActivity"
+            android:label="@string/app_name"
+            android:alwaysRetainTaskState="true"
+            android:launchMode="singleTask"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:windowSoftInputMode="stateUnspecified"
+            android:process=":RestartMainActivity" />
+        <service android:name="x.org.server.DummyService"
+            android:configChanges="mcc|mnc|locale|touchscreen|keyboard|keyboardHidden|navigation|screenLayout|fontScale|uiMode|orientation|screenSize|smallestScreenSize|layoutDirection"
+            android:enabled="true"/>
+
+
+
+    </application>
+
+</manifest>
