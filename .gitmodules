@@ -1,0 +1,3 @@
+[submodule "app/src/main/assets/WineBox86.zip/box86"]
+	path = app/src/main/assets/WineBox86.zip/box86
+	url = https://github.com/ptitSeb/box86.git
