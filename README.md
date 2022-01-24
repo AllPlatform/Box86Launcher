@@ -34,7 +34,7 @@ Box86Launcher Is Modified Version Of [ptitSeb/box86](https://github.com/ptitSeb/
 - [ ] Wine 5.X
 
 ### Youtube Tutorial
->[AkiraYuki Offcial](https://youtube.com/channel/UCS6lNcr6OwtB4RLNg38a06Q)
+>[AkiraYuki](https://youtube.com/channel/UCS6lNcr6OwtB4RLNg38a06Q)
 
 ### Author And License
 >[ptitSeb/Box86](https://github.com/ptitSeb/box86)
