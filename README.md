@@ -5,7 +5,7 @@ Box86Launcher Is Modified Version Of [ptitSeb/box86](https://github.com/ptitSeb/
 
 | Android  | Support |
 | ------------- | ------------- |
-|  Android 10 | ?  |
+| Android 10 11 | yes  |
 | Android 9 | Yes  |
 | Android 8 | No   |
 
@@ -19,7 +19,7 @@ Box86Launcher Is Modified Version Of [ptitSeb/box86](https://github.com/ptitSeb/
 - [x] Termux
 - [x] Wine X11 4.21
 - [x] Android 9 Xiaomi LG
-- [ ] Android 10 [ ? ] [ Skip ]
+- [x] Android 10 - 11
 - [x] Shortcut
 - [x] About App
 - [ ] Fix Some Error Of Wine [ Processing ]
