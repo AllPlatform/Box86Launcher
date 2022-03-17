@@ -74,7 +74,7 @@ public class DummyService extends Service
 			.setOngoing(true)
 			.build();
 		PendingIntent killIntent = PendingIntent.getService(this, 5, new Intent(Intent.ACTION_DELETE, null, this, DummyService.class), PendingIntent.FLAG_CANCEL_CURRENT);
-		PendingIntent showIntent = PendingIntent.getActivity(this, 0, new Intent("", null, this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT);
+		PendingIntent showIntent = PendingIntent.getActivity(this, 0, new Intent("", null, this, MainActivity.class), PendingIntent.FLAG_CANCEL_CURRENT | PendingIntent.FLAG_IMMUTABLE);
 		ntf.deleteIntent = killIntent;
 		RemoteViews view = new RemoteViews(getPackageName(), R.layout.notification);
 		view.setCharSequence(R.id.notificationText, "setText", getString(R.string.notification_app_is_running, getString(getApplicationInfo().labelRes)));
