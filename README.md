@@ -5,6 +5,7 @@ Box86Launcher Is Modified Version Of [ptitSeb/box86](https://github.com/ptitSeb/
 
 | Android  | Support |
 | ------------- | ------------- |
+| Android 12 | yes |
 | Android 10 11 | yes  |
 | Android 9 | Yes  |
 | Android 8 | No   |
